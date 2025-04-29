@@ -1,5 +1,15 @@
 package com.automationteststore.base;
 
-public class TestBase {
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
 
+public class TestBase {
+	protected WebDriver driver;
+	
+	@BeforeTest
+	public void openBrowserOnlink() {
+		driver = DriverFactory.getDriverFactoryInstance().initializeDriverInstance("chrome");
+		driver.get("https://automationteststore.com/");
+		driver.manage().window().maximize();
+	}
 }
