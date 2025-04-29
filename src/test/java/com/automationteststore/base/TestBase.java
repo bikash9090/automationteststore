@@ -9,7 +9,7 @@ public class TestBase {
 	@BeforeTest
 	public void openBrowserOnlink() {
 		driver = DriverFactory.getDriverFactoryInstance().initializeDriverInstance("chrome");
-		driver.get("https://automationteststore.com/");
+		driver.get("");
 		driver.manage().window().maximize();
 	}
 }
